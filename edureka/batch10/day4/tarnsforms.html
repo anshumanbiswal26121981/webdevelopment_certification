@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transform</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+           div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid crimson;
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+           } 
+
+           .rotate {
+              /* -webkit-transform: rotate(45deg); /* common */
+                -webkit-transform: rotate(-360deg);
+               -moz-transform: rotate(45deg);/* understood by firefox */
+               -ms-transform: rotate(45deg);/* understood by internet explorer */
+               -o-transform: rotate(45deg);/* understood by opera */
+              /* transform: rotate(45deg); /* common/standard. Give the browser prefix version always at first and standard one at the end */
+           }
+           .anticlock-rotate {
+            transform: rotate(-45deg);
+           }
+
+           .scale-and-translate {
+            -webkit-transform: scale(3,2) translate(50px, 50px); /* common  this will make the elemnt big but it will cross the screen. SO to avoid that we 
+            can use translate and put values to move to a position*/
+            transform: scale(3,2)  translate(50px, 60px);
+        }
+
+        .skew {
+            margin-top: 0px;
+            margin-left: 500px;
+            transform: skew(45deg, 10deg);
+        }
+        </style>
+        
+    </head>
+    <body>
+    <!-- Rotate, scale, translate, skew -->
+     <div class="rotate">
+         Some div
+     </div>
+
+     <br/>
+
+     <div class="anticlock-rotate" >
+        Some div2
+    </div>
+
+    <div class="scale-and-translate" >
+        Some div3
+    </div>
+
+    <div class="skew" >
+        Some div4
+    </div>
+    </body>
+</html>

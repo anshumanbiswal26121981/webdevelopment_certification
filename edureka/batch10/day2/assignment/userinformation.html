@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day2 Assignemmet USER INFORMATION</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Display the web page with “USER INFORMATION” as heading using the <h1> tag and
+                include the following fields as the form fields:
+                » First Name
+                » Last Name
+                » Address
+                » Email ID
+                » date of birth Use date field-->
+                <h1> USER INFORMATION</h1>
+
+                <form>
+
+                    <label for="First Name">First Name </label>
+                    <input type="text" id="firstName" name="firstName" autofocus placeholder="First Name"/>
+                    <br/>
+                    <br/>
+
+                    <label for="Last Name">Last Name </label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name"/>
+                    <br/>
+                    <br/>
+
+                    <label for="Address">Address </label>
+                    <textarea rows = "5" cols = "60" name = "Address" required placeholder="Enter your current address"></textarea>
+                    <br/>
+                    <br/>
+                    <label for="EmailId">EmailId</label>
+                    <input type="email" placeholder="your email id" required autocomplete/>
+                    <br/>
+                    <br/>
+                    <label for="Date">Date</label>
+                     <input type="date" />
+                     <br/>
+                     <br/>
+                     <input type="submit" value="Submit Form"/>
+                </form>
+    
+    </body>
+</html>

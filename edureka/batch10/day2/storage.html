@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Local and Session Storage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- usually javascript is included at the end of teh page-->
+        <script>
+            console.log (sessionStorage);
+            console.log (localStorage);
+            localStorage.setItem('Name','Anshuman');
+            localStorage.setItem('Name1','Anshuman1');
+            localStorage.setItem('Name2','Anshuman2');
+
+            var name1 = localStorage.getItem('Name1')
+            console.log(name1)
+
+            localStorage.removeItem('Name2')
+           //local storage is for persistent data and session storage is only valid per session
+           sessionStorage.setItem('Name', 'Swati')
+        </script>
+    </body>
+</html>

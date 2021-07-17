@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forms in html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <form action="process-form.html" method="POST">
+            <label for="name">Name </label>
+            <input type="text" id="name" name="name"/>
+
+            <label for="age">Age </label>
+            <input type="text" id="age" name="age"/>
+
+            <label for="pwd">Password </label>
+            <input type="password" id="pwd" name="pwd"/>
+
+            <label for="comments">Comments </label>
+            <textarea id="comments" name="comments"> </textarea>
+
+            <label for="cities">Cities </label>
+            <select id = "cities" name="cities">
+                <option value="SF">San Francisco</option>
+                <option value="CA">Canda</option>
+                <option value="TX">Texas</option>
+                <option value="NJ">New Jersey</option>
+            </select>
+
+            <label for="multiselect-cities">Multi Select Cities </label>
+            <select id = "multiselect-cities" name="multiselect-cities" multiple="multiple">
+                <option>San Francisco</option>
+                <option>Canda</option>
+                <option>Texas</option>
+                <option>New Jersey</option>
+            </select>
+
+            <!-- In checkbox give the name field same for the checkboxes tha t you want to have in a group-->
+            <label> <input type="checkbox" name="courses" id="web-dev" value="wd"/> Web Development</label>
+            <label> <input type="checkbox"  name="courses" id="piano" value="piano"/> Piano Classes</label>
+            <label> <input type="checkbox"  name="courses" id="tennis" value="tennis"/> Tennis</label>
+
+            <label> <input type="radio" name="courses2" id="web-dev" value="wd"/> Web Development</label>
+            <label> <input type="radio"  name="courses2" id="piano" value="piano"/> Piano Classes</label>
+            <label> <input type="radio"  name="courses2" id="tennis" value="tennis"/> Tennis</label>
+
+            <input type="submit" value="Sign me up"> 
+            <input type="reset" value="Reset the form"> 
+        </form>
+    </body>
+</html>

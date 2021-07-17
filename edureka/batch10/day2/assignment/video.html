@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day2 Assignment video</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Write HTML script to play video file with controls and play the video file as soon as the
+            web page is loaded (Use autoplay option). The video has to repeat playing once it stops
+            (Use loop-->
+
+                <video controls loop autoplay> <!-- loop to play again and again-->
+                    <!-- autoplay to play automtically when it loads-->
+                    <source src="video/file_example_MP4_480_1_5MG.mp4" type="video/mp4"/><!-- type is the mime types-->
+                    <source src="video/file_example_WEBM_480_900KB.webm" type="video/webm"/><!-- second one is the backup. In some browser mp3 cannot be played
+                    so we need to provide the altrnate of the same file in ogg format-->
+                </video>
+    </body>
+</html>

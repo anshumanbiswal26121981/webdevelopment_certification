@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Resolving conficts in styles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+             
+    </head>
+    <body>
+
+        <!-- You can put style anywhere. But here also the last css wins-->
+        <style>
+            /* id selector being more specific gets more importance*/
+            /* Even with external style sheet, if the */
+            #para-1 {
+                color: red;
+                font-size: 2em;
+            }
+            /* the element selector in external is not specific and it applies to all*/
+            p {
+                color: yellow;
+                font-size: 2em;
+            }
+
+            p { /* last css rule wins to resolve conflicts(when selectors are same) */
+                color: blue;
+            }
+
+            /* */
+            p#para-1 {
+                color: gray;
+            }
+  
+            /*specificity values can be done by
+            {a,b,c,d}
+            a =  0/1 : 1 for iniline selectors
+            b = number of ids in the selector
+            c = number of classes in the selector
+            d = number of tags mentioned in the selector 
+            so specificity value of 
+             p#para-1 {
+                color: gray;
+            }
+            is (0,1,0,1)
+            */
+        </style>
+        <link href="style-external.css" rel="stylesheet"> <!-- if it is here instead of in the head then the color purple will take effect-->
+        <!-- Sp if w use inline selctors then the inline wins-->
+        <p style="color: palegreen;"> Some paragraph 1 with inline style</p>
+
+        <!-- the id selector wins and always inline seloctor wins  -->
+        <p id="para-1"> Some paragraph 1 with id selector style</p>
+    
+    </body>
+</html>

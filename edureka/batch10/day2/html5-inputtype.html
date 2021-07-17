@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>HTML5 inputs and attributes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    <form enctype="multipart/form-data" action="../day1/process-form.html" method="post"> <!-- enctype="multipart/form-data" is needed to upload a file-->
+      Quantity:  <input type="number" min="1" max="10"/>
+      </br>
+        Quantity with fraction step:  <input type="number" min="1" max="10" step="0.5"/>
+      </br>
+      Email: <input type="email" placeholder="your email id" required autocomplete autofocus/> <!-- required attribute will make sure that form cannot be submitted if the input text is empty-->
+      <!-- autocomplete will give you auto suggestions-->
+      <!-- autofocus when page loads the focus automatically goes to the text box-->
+      </br>
+    URL: <input type="url" />
+
+    </br>
+    telephone: <input type="tel" />
+    </br>
+    Rating of course: <input type="range" min="1" max="5"/>
+     </br>
+    Search: <input type="search" />
+    </br>
+    Choose file to upload: <input type="file" name="profile" />
+    </br>
+    Choose multiple files to upload: <input type="file" name="profile" multiple/>
+
+</br>
+
+Date: <input type="date" />
+    <input type="submit" value="Submit Form"/>
+     <input type="submit" value="Submit Form(without validation)" formnovalidate/> <!-- form no validate will send the form without validation-->
+    </form>
+    <!-- we can have multiple forms in a page and a form can have multiple submit buttons-->
+
+    </body>
+</html>

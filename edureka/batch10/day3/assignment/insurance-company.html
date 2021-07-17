@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Insurance company</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+            table,td,th,tr {
+                width: 50%;
+                margin-left: 220px;
+                margin-right: auto;
+                border: 1px solid crimson;
+                border-collapse: collapse; /* collapse the border of cell into 1*/
+                border: 1px solid crimson;
+                border-collapse: collapse; /* collapse the border of cell into 1*/
+            }
+            td,th {
+                padding: 20px;
+            }
+            tr:nth-child(even) {
+                background-color: pink; /* zebra striping  for even chils of the parent the background is set */
+            }
+
+            p {
+                margin-left: 100px;
+                margin-right: 150px;
+            }
+            p > span{
+               text-align: justify;
+                color: navy;
+                font-size: 20px;
+            }
+
+            p:first-child {
+                border: 1px solid red;
+            }
+
+            p:nth-child(2) {
+                border: 1px dotted orange;
+            }
+          
+            p:last-child {
+                border: 1px dashed green;
+            }
+            
+        </style>
+    </head>
+    <body>
+         <!-- 
+             Display the insurance company policy holder’s information in a table. The table must have
+            the following information:
+                » Policy Id, Policy Holder’s Name, and Insured Amount
+                Perform the following operations on it:
+                » Display the table which is 50% width of the screen
+                » Table header should be in Dark Gray color
+                » Display the border in green color for table header and data
+         -->
+         <div>
+      
+            <!-- Display an image by specifying absolute position at 300 from left and 100 pixels from top -->
+            <img src="images/insurance.png" style="margin-left: 300px; margin-top: 100px;">
+
+            <table  id="table_div">
+                <caption>Insurance Company</caption>
+                <thead>
+                    <tr>
+                        <td>
+                            Policy Id
+                        </td>
+                        <td>
+                            Policy Holder Name
+                        </td>
+                        <td>
+                            Insured Amount
+                        </td>
+                    </tr>
+        
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            123456
+                        </td>
+                        <td>
+                            Anshuman Biswal
+                        </td>
+                        <td>
+                            2000000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8698790
+                        </td>
+                        <td>
+                            Swati Hans
+                        </td>
+                        <td>
+                            2000000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            87987980
+                        </td>
+                        <td>
+                            Laisha Biswal
+                        </td>
+                        <td>
+                            100000000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            679870932
+                        </td>
+                        <td>
+                            Anupam Biswal
+                        </td>
+                        <td>
+                            20000000
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            59098097
+                        </td>
+                        <td>
+                            Namish Biswal
+                        </td>
+                        <td>
+                            300000
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            354765876
+                        </td>
+                        <td>
+                            K L Biswal
+                        </td>
+                        <td>
+                            3798797
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            76876987
+                        </td>
+                        <td>
+                            Anupam Biswal
+                        </td>
+                        <td>
+                            3768769
+                        </td>
+                    </tr>
+        
+                </tbody>
+            </table>
+
+            </div>
+
+            <div>
+                <!-- 
+                    Display 3 paragraphs and have separate borders for them. Display the first paragraph in
+                    solid border, second in dotted and third in dashed. Font color should be in navy blue and
+                    size of the font should be 20 pixels
+                -->
+                <p>
+                    <span>
+                        Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Cras ultricies ligula sed magna dictum porta. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
+                    </span>
+                   
+                </p>
+
+                <p>
+                    <span>
+                        Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                    </span>
+                </p>
+
+                <p>
+                    <span>
+                        Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Sed porttitor lectus nibh. Nulla porttitor accumsan tincidunt. Proin eget tortor risus.
+                    </span>
+                </p>
+
+            </div>
+
+    
+    </body>
+</html>

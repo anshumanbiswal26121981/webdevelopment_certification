@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+          /* p {
+                display: inline; /* this will make the paragraphs that are there below inline. 
+                Display inline width, height , margins cannot be applied . So inline-block is used*/
+            /* } */
+
+            p {
+                display: inline-block; 
+                width: 200px;
+            }
+
+            p:nth-child(3) {
+                visibility: hidden; /* para 3 is hiddlen but the space is not reclaimed
+                 and so the box of the para gap is still seen. Yo can see space between [ara 2 and para 4*/
+            }
+
+            p:nth-child(6) {
+                display: none; /* para 6 is hiddlen but the space is reclaimed*/
+            }
+
+            p:nth-child(5) {
+                opacity: 0.75;/* para 5 is slightly dull . with value as 0, it will hide it.*/
+            }
+        </style>
+    </head>
+    <body>
+
+        <p>
+            Some paragraph 1
+        </p>
+
+        <p>
+            Some paragraph 2
+        </p>
+
+        <p>
+            Some paragraph 3
+        </p>
+
+        <p>
+            Some paragraph 4
+        </p>
+
+        <p>
+            Some paragraph 5
+        </p>
+
+        <p>
+            Some paragraph 6
+        </p>
+
+        <p>
+            Some paragraph 7
+        </p>
+    
+    
+    </body>
+</html>

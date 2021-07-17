@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Audio videp demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <audio controls loop autoplay> <!-- loop to play again and again-->
+            <!-- autoplay to play automtically when it loads-->
+            <source src="audio/file_example_MP3_700KB.mp3" type="audio/mp3"/><!-- type is the mime types-->
+            <source src="audio/file_example_OOG_1MG.ogg" type="audio/ogg"/><!-- second one is the backup. In some browser mp3 cannot be played
+            so we need to provide the altrnate of the same file in ogg format-->
+        </audio>
+
+        <video controls loop autoplay> <!-- loop to play again and again-->
+            <!-- autoplay to play automtically when it loads-->
+            <source src="video/file_example_MP4_480_1_5MG.mp4" type="video/mp4"/><!-- type is the mime types-->
+            <source src="video/file_example_WEBM_480_900KB.webm" type="video/webm"/><!-- second one is the backup. In some browser mp3 cannot be played
+            so we need to provide the altrnate of the same file in ogg format-->
+            </video>
+    </body>
+</html>

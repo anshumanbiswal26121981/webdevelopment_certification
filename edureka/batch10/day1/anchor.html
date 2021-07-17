@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Anchor tags(hyperlinks or links)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- We can have style sheets of the anchor tag in the css style sheets and the various states of the hyperlinks can also be done 
+        using css as follows-->
+        <!--way 1:  embedded css ( css is embedded in the html page)-->
+        <style>
+            a {
+                color: darkgray;
+            }
+
+            a:visited {
+                color: brown;
+                font-size: 1.5em 
+            }
+            a:hover {
+                color: yellowgreen;
+                font-size: 2em;
+            }
+            a:activated {
+                color: red;
+                font-size: 3em;
+            }
+            #tag-2 {
+                text-decoration: none;
+            }
+        </style>
+
+    </head>
+    <body>
+     <h1>
+         Adding links to other documents.
+     </h1>
+     <hr/>
+     <!-- way 2: css can be included in the tags as attribues. this is not preferred-->
+     <a href="img.html" style="text-decoration: none;"> link to the image demo</a>
+     <!-- way 3: usually way 2 is not good as it mixes html and css. So the third way is to use the id attribute and use the id in the
+    css style. This is preferred. But the best is the way 4 where we can separate the css in a separate file. Check that in anchor2.html-->
+     <a href="dummy.html" id="tag-2"> link to the dummy page demo</a>
+     <!-- suppose you want the hyperlink to go directly to some particular para of the dummy page then use the #<id> format in the href 
+         like below-->
+     <a href="dummy.html#third-para"> link to the dummy page third-para demo</a>
+     <!-- to open a hyper link in new tab use target attribute with value as _blank-->
+     <a href="https://www.medium.com" target="_blank"> link to the medium pafe( a blogging site)</a>
+    </body>
+</html>

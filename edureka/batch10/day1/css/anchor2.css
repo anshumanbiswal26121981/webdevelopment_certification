@@ -1,0 +1,23 @@
+/*
+This style is preferrable. This is also called as external css file. This is more preferrable because we can use the same style sheet file
+in any other html files 
+*/
+a {
+    color: darkgray;
+}
+
+a:visited {
+    color: brown;
+    font-size: 1.5em 
+}
+a:hover {
+    color: yellowgreen;
+    font-size: 2em;
+}
+a:activated {
+    color: red;
+    font-size: 3em;
+}
+#tag-2 {
+    text-decoration: none;
+}

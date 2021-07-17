@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+           .abs {
+                position: absolute;
+                top:0px;
+                border: 1px solid crimson;
+                height: 100px;
+                width: 100%;
+            }
+
+            .dialog {
+                position: relative;
+                top: 30px;
+                left: 50%;
+                width: 400px;
+                height:300px;
+                padding: 10px;
+                border: 2px solid crimson;
+            }
+
+            /*
+            .dialog {
+                position: fixed;
+                top: 30px;
+                left: 50%;
+                margin-left: -200px;
+                width: 400px;
+                height:300px;
+                padding: 10px;
+                border: 2px solid crimson;
+            }
+            to center a dialog make margin-left: width/2
+            */
+
+            .dialog-close {
+                position: absolute;
+                top:10px;
+                right:10px;
+            }
+        </style>
+    </head>
+    <body>
+      
+        <div >
+            Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus magna justo, lacinia eget 
+        </div>
+
+
+        <div style="position: relative;">
+            <div class="abs">
+                new absolute div
+            </div>
+        </div>
+        <br/> <br/> <br/> <br/> <br/>
+
+
+
+
+
+        <div class="dialog">
+            <span class="dialog-close">&times;</span>
+
+
+            Cras ultricies ligula sed magna dictum porta. 
+        </div>
+    </body>
+</html>

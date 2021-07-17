@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>selectors in css</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        
+        <style>
+            /* this selects an attribute which has a fixed value*/
+            a[target=_blank] {
+                color: crimson;
+                text-decoration: none;
+                }
+
+/* select based on the attrbute and in this style the value doesnot matter. Where as the above style was for target=blank value only and here it will apply style to all the 
+ elements which has target attribute */
+                a[target] {
+                    font-size: 2em;
+                }
+        </style>
+    </head>
+    <body>
+        <!-- in this i want to style the ancgor tag that opens in a new page-->
+        <a href="https://www.google.com/">Google</a>
+        <a href="https://www.facebook.com/" target="_blank">facebook</a>
+        <a href="https://www.medium.com/">medium</a>
+        <a href="https://www.twitter.com/" target="_blank">Twitter</a>
+        <a href="https://www.edureka.com/" target="my-iframe">Edureka</a>
+        <iframe src="dropbox.pdf" name="my-iframe" />
+    
+    </body>
+</html>

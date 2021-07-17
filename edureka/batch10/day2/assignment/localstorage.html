@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Day2 Assignment local storage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- 
+        Write HTML script to store your first name, last name and date of birth as part of web
+        storage and display the stored local storage content by retrieving it
+    -->
+    <script>
+        localStorage.setItem('first_name','Anshuman');
+        localStorage.setItem('last_name','Biswal');
+        localStorage.setItem('dob','26Dec1981')
+
+        var fname = localStorage.getItem('first_name')
+        var lname = localStorage.getItem('last_name')
+        var dob = localStorage.getItem('dob')
+        console.log(fname)
+        console.log(lname)
+        console.log(dob)
+    </script>
+    </body>
+</html>

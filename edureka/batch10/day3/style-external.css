@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Resolving conficts in styles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <!-- You can put style anywhere. But here also the last css wins-->
+        <style>
+            /* id selector being more specific gets more importance*/
+            #para-1 {
+                color: green;
+                font-size: 2em;
+            }
+            /* the element selector in external is not specific and it applies to all*/
+            p {
+                color: red;
+                font-size: 2em;
+            }
+
+            p { /* last css rule wins to resolve conflicts(when selectors are same) */
+                color: blue;
+            }
+  
+        </style>
+        /* Sp if w use inline selctors then the inline wins*/
+        <p style="color: palegreen;"> Some paragraph 1 with inline style</p>
+
+        <!-- the id selector wins and always inline seloctor wins  -->
+        <p id="para-1"> Some paragraph 1 with inline style</p>
+    
+    </body>
+</html>

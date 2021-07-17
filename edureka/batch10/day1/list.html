@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>List</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #circle-bullet {
+                list-style-type: circle;
+            }
+
+            #no-bullet {
+                list-style-type: none;
+            }
+
+            #olStyleSheet {
+                list-style-type: lower-alpha;
+            }
+
+           #olStyleSheet2 :nth-child(odd) { /* ol > li means li within ol tag*/
+                color: crimson;
+            }
+          </style>
+    </head>
+    <body>
+        <h1> Ordered and unordered list</h1>
+        <ul> <!-- unordered list-->
+             <li> <!-- list item-->
+                    Apple
+             </li>
+             <li> <!-- list item-->
+                Orange
+             </li>
+             <li> <!-- list item-->
+                Banana
+             </li>
+
+        </ul>
+
+        <ul id="circle-bullet"> <!-- unordered list-->
+            <li> <!-- list item-->
+                   Apple
+            </li>
+            <li> <!-- list item-->
+               Orange
+            </li>
+            <li> <!-- list item-->
+               Banana
+            </li>
+
+       </ul>
+
+       <ul id="no-bullet"> <!-- unordered list-->
+        <li> <!-- list item-->
+               Apple
+        </li>
+        <li> <!-- list item-->
+           Orange
+        </li>
+        <li> <!-- list item-->
+           Banana
+        </li>
+
+   </ul>
+
+   <ol > <!-- ordered list-->
+    <li> <!-- list item-->
+           January1: New Year
+    </li>
+    <li> <!-- list item-->
+       April 8: Good Friday
+    </li>
+    <li> <!-- list item-->
+       Dec 25: Christmas
+    </li>
+
+</ol>
+<ol id="olStyleSheet"> <!-- ordered list-->
+    <li> <!-- list item-->
+           January1: New Year
+    </li>
+    <li> <!-- list item-->
+       April 8: Good Friday
+    </li>
+    <li> <!-- list item-->
+       Dec 25: Christmas
+    </li>
+
+</ol>
+
+<ol id="olStyleSheet2"> <!-- ordered list-->
+    <li> <!-- list item-->
+           January1: New Year
+    </li>
+    <li> <!-- list item-->
+       April 8: Good Friday
+    </li>
+    <li> <!-- list item-->
+       May1: Labor day
+    </li>
+    <li> <!-- list item-->
+        Dec 25: Christmas
+     </li>
+
+</ol>
+    </body>
+</html>

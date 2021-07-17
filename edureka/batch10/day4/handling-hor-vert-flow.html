@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /*
+            Techniques to handle vertical overflow
+            overflow:hidden
+            overflow:auto
+            overflow: scroll
+            {overflow:hidden 
+            resize:both}
+            the last two works in combination but it is not a good practise
+            */
+
+             /*
+            Techniques to handle vertical overflow: this woll occur when a word is too long and browser is squeezed then the long word can overflow horizontally.
+             {overflow:hidden 
+            resize:both}
+            word-wrap: break-word
+            */
+            div {
+                /*overflow: auto;/* is needed if you squeeze the browser and text overflows teh div . Uncomment the overflow for vertical overflow auto. overflow auto can be used for both horizontal and vertical overflow. Word-wrap is only for horizontal overflow*/
+                word-wrap: break-word;
+                height: 200px;
+                width: 200px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div>
+            Vestibulum sadsdasdasdasdasdasdasdasdasddddddddddddasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdadsasdaasdasd
+            ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.
+        </div>
+    </body>
+</html>

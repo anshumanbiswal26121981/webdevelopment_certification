@@ -1,0 +1,17 @@
+@font-face {
+  src: url("../day4/fonts/RobotoCondensed-Bold.ttf");
+  font-family: 'RobotoBold';
+}
+
+@font-face {
+    src: url("../day4/fonts/RobotoCondensed-BoldItalic.ttf") ;
+    font-family: 'Custom Roboto Bold Italic';
+  }
+
+  @font-face {
+    src: url("../day4/fonts/RobotoCondensed-Regular.ttf") ;
+    font-family: 'Custom Roboto';
+  }
+
+  
+  

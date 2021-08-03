@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="jquery-countdown/css/jquery.countdown.css"> 
+        <style>
+            div {
+                height: 50px;
+            }
+        </style>
+       
+    </head>
+    <body>
+
+        <div id="countdown" class="countdown">
+
+        </div>
+       
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="jquery-countdown/js/jquery.plugin.js"></script> 
+        <script src="jquery-countdown/js/jquery.countdown.js"></script>
+        <script>
+          
+            $(document).ready(function() {
+                var startDate = new Date(2016,07,02); 
+                console.log('startDate=', startDate);
+                var newYear = new Date(startDate.getFullYear() + 1, 1 - 1, 1); 
+                console.log('new newYear=', newYear);
+                $('#countdown').countdown({since: startDate}); 
+            });
+           
+        </script>
+    </body>
+</html>

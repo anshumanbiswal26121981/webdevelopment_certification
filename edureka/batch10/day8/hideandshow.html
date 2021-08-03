@@ -24,40 +24,33 @@
                 border-color: crimson;
                 background-color: lightpink;
             }
+   
         </style> 
     </head>
     <body>
 
         <div class="message message-success">Success</div>
         <div class="message message-danger ">Danger</div>
-
-        Name: <input type="text" id="name" name="name" value="John"/>
-
-        <input type = "button" id="btnLogName" name="btnLogName" value="log values name in console"/>
-       
+        <button id='btn-hide'>Hide</button>
+        <button id='btn-show'>Show</button>
+        <button id='btn-toggle'>Toggle</button>
         <script src="jquery-3.6.0.min.js"></script>
         <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
         <script>
-           
             //in jquery all the statements are wriiten in this type of block, where we are passing the dom node
             // in document variable
             $(document).ready(function() {
-                var $message = $('.message');
-                console.log($message.html('This is a <b>message</b>'));// this sets inner html of all matched elements
-                //reading through jquery
-                $('.message').html();// this reads the first element only even if there will be multiple elements using the same class.
-                // $message.css('font-weight','bold'); // single selection
-                // for multiple prameters to use
-                $message.css({
-                    'font-weight':'bold',
-                    color :'white'
+                $('#btn-hide').on('click', function(){
+                    $('.message-success').hide();
                 });
 
-                $('#btnLogName').on('click', function() {
-                    console.log($('[name="name"]').val()); // getting the existib=ng values
-                    $('[name="name"]').val('');//set the value. In this case it is setting the empty
+                $('#btn-show').on('click', function(){
+                    $('.message-success').show();
                 });
-               
+
+                $('#btn-toggle').on('click', function(){
+                    $('.message-success').toggle();
+                });
             });
            
         </script>

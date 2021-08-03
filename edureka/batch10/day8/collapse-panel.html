@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .panel {
+                
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 4px;
+                margin: 10px 0;
+               
+            }
+
+            .panel-heading {
+                cursor: pointer;
+            }
+            .panel-success {
+                border-color: green;
+            }
+
+            .panel-success .panel-heading {
+                border-color: green;
+                background-color: lightgreen;
+            }
+
+            .panel-danger {
+                border-color: crimson;
+                background-color: lightpink;
+            }
+            .panel-danger .panel-heading {
+
+            }
+
+            .panel-body, .panel-heading {
+                padding: 10px 20px;
+            }
+        </style> 
+    </head>
+    <body>
+
+        <div class="panel panel-success">
+
+            <div class="panel-heading">
+                Message 1
+            </div>
+            <div class="panel-body">
+                you have been subscribed to our newsletter
+            </div>
+        </div>
+      
+        <div class="panel panel-danger">
+
+            <div class="panel-heading">
+                Message 1
+            </div>
+            <div class="panel-body">
+                you have been subscribed to our newsletter
+            </div>
+        </div>
+      
+
+
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            //in jquery all the statements are wriiten in this type of block, where we are passing the dom node
+            // in document variable
+            $(document).ready(function() {
+                $('.panel-heading').click(function () {
+                        $(this).closest('.panel').find('.panel-body').slideToggle(150);
+   
+                });
+            });
+           
+        </script>
+    </body>
+</html>

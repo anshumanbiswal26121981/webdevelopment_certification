@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .message {
+                padding: 10px 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 4px;
+                margin: 10px 0;
+               
+            }
+
+            .message-success {
+                border-color: green;
+                background-color: lightgreen;
+            }
+
+            .message-danger {
+                border-color: crimson;
+                background-color: lightpink;
+            }
+            .yellow-bg {
+                background-color: yellow;
+            }
+
+            .olive-bg {
+                background-color: olive;
+            }
+        </style> 
+    </head>
+    <body>
+
+        <div class="message message-success">Success</div>
+        <div class="message message-danger ">Danger</div>
+        Name: <input type="text" id="name" name="name" value="John"/>
+        Phone: <input type="text" id="tel"/>
+       
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            //in jquery all the statements are wriiten in this type of block, where we are passing the dom node
+            // in document variable
+            $(document).ready(function() {
+                // $('.message').on('click', function(){
+                //     console.log($(this).html());
+                // });
+
+                /* or */
+
+                // $('.message').click(function($event){
+                //     console.log('click: ',$(this).html());
+                //     console.log($event);
+                // });
+
+                // $('.message').dblclick(function($event){
+                //     console.log('doble click: ', $(this).html());
+                //     console.log($event);
+                // });
+
+                // or
+
+                //multi event handler setup
+                $('.message').on({
+                    click: function($event) {
+                        console.log('click: ', $(this).html());
+                        console.log($event);
+                    },
+                    dblclick: function($event) {
+                        console.log('doble click: ', $(this).html());
+                        console.log($event);
+                    },
+                    mouseenter: function() {
+                        console.log('mouse entered: ', $(this).html());
+                    }
+                    //click is fired when mouse is down and released
+                    // mouse down is fired when mouse is down
+                });
+
+                $('input').on({
+                    focus: function(){
+                        $(this).removeClass('olive-bg').addClass('yellow-bg');
+                    },
+                    blur: function() {
+                        $(this).removeClass('yellow-bg').addClass('olive-bg');
+                     
+                    }
+                })
+            });
+           
+        </script>
+    </body>
+</html>

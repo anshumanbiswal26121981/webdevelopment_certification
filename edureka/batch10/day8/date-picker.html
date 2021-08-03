@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+</head>
+<body>
+    
+    <input type="text" id="start-date"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      
+       $(document).ready(function() {
+
+        function isInvalid() {
+            return true;
+        }
+           var date = new Date();
+           date.setDate(date.getDate() + 1);
+               $('#start-date').datepicker({
+                //    minDate: 0,// give it a number or date object or also it takes string in a particular format. Minday of 0 menas today
+                //    maxDate: 180
+
+                /* or */
+
+                // minDate: new Date(),// give it a number or date object or also it takes string in a particular format. Minday of 0 menas today
+                //    maxDate: 180
+
+                /* or */
+                // minDate: date,// give it a number or date object or also it takes string in a particular format. Minday of 0 menas today
+                // maxDate: 180
+
+                  /* or */
+                  minDate: '21/04/08',
+                 maxDate: 180,
+                 changeMonth: true,
+                 changeYear:true,
+                 dateFormat: 'D, dd-M-yy',
+                 onSelect: function(selectedDate, obj){
+                     console.log('date selected', selectedDate);
+                     if (isInvalid(selectedDate)) {
+                         setTimeout(function() {
+                            $('#start-date').val('');
+                         }, 0)
+                         
+                     }
+                 }
+
+               });
+        });
+    </script>
+</body>
+</html>

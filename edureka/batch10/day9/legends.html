@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends</title>
+    <link href="bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="bootstrap-3.4.1/css/bootstrap-theme.min.css" rel="stylesheet" >
+
+    <style>
+        .row {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h2> The Legends </h2>
+       <div class="row">
+           <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id' data-src="/description/mg.html">
+                    <img src="images/mg.jpg"/>
+                </a>
+           </div>
+
+            <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/scb.html">
+                    <img src="images/scb.jpg"/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/csa.html">
+                    <img src="images/csa.jpg"/>
+                </a>
+            </div>
+       </div>
+
+       <div class="row">
+            <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id' data-src="/description/mg.html">
+                    <img src="images/mg.jpg"/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/scb.html">
+                    <img src="images/scb.jpg"/>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/csa.html">
+                    <img src="images/csa.jpg"/>
+                </a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                 <a class="btn btn-primary" data-toggle="modal" href='#modal-id' data-src="/description/mg.html">
+                     <img src="images/mg.jpg"/>
+                 </a>
+            </div>
+ 
+             <div class="col-md-4">
+                 <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/scb.html">
+                     <img src="images/scb.jpg"/>
+                 </a>
+             </div>
+ 
+             <div class="col-md-4">
+                 <a class="btn btn-primary" data-toggle="modal" href='#modal-id'  data-src="/description/csa.html">
+                     <img src="images/csa.jpg"/>
+                 </a>
+             </div>
+        </div>
+
+      
+
+ 
+   
+   
+   <div class="modal fade" id="modal-id">
+       <div class="modal-dialog">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                   <h4 class="modal-title">The Legends</h4>
+               </div>
+               <div class="modal-body">
+                   
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Got it</button>
+               </div>
+           </div>
+       </div>
+   </div>
+   
+<script src="jquery-3.6.0.min.js"></script>
+<script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script>
+    $('a').on('click', function(){
+        $.ajax({
+            method: 'GET',
+            url: $(this).attr('data-src'),
+            success: function(response) {
+                $('#modal-id .modal-body').html(response);
+            },
+            error: function() {
+                alert('Sorry, Coul not fetch any description of the legend');
+            }
+        });
+    });
+  
+</script>
+</body>
+</html>

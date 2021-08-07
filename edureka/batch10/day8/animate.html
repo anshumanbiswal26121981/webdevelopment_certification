@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                border: 1px solid crimson;
+                background-color: lightpink;
+            }
+        </style>
+       
+    </head>
+    <body>
+
+        <div></div>
+       
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            //in jquery all the statements are wriiten in this type of block, where we are passing the dom node
+            // in document variable
+            $(document).ready(function() {
+                $('div').hover(function() {
+                    $('div').animate({
+                        width:'200px',
+                        height: '200px'
+                    },150);
+                },
+                function(){
+                    $('div').animate({
+                        width:'100px',
+                        height: '100px'
+                    },150);
+                });
+            });
+           
+        </script>
+    </body>
+</html>

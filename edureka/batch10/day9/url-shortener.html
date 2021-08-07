@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <div id="quote"></div>
+    URL to shorten: <input type="text" id='shortener'/>
+    <input type="button" id="btn-shorten" />
+    <div id="shortened-url"></div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+    <script>
+        window.addEventListener('load',function() {
+            gapi.client.setApiKey("PUT your API key here");
+            gapi.client.load('urlshortener','v1', function(){
+            });
+            $('#btn-shorten').on('click', function(){
+                var request = gapi.client.urlshortener.url.insert({
+                    longUrl = $('#shortener').val()
+                });
+                request.execute(function(response) {
+                    if (response.id !== null) {
+                        $('#shortened-url').html(response.id);
+                    } else {
+                        alert('Some error occurred');
+                    }
+                });
+
+            })
+        });
+    </script>
+
+
+</body>
+</html>

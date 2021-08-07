@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="jquery-countdown/css/jquery.countdown.css"> 
+
+    <style>
+        /* You need to inspect and see the el;emsnta id and classname of the third party plygin to customize your own way */
+        #countdown {
+            overflow: hidden;
+        }
+        .countdown-amount {
+         color: red;
+        }
+
+        .countdown-section {
+            font-size: 125%;
+            text-align: center;
+        }
+        .contenthover {
+            color: lightgrey;
+            padding: 20px;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 0;
+        }
+
+        .grey-tiles {
+            background-image: url("images/greyimage.jpg");
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class='content-with-image'>
+        <img src="images/image10.jpg" id="image10"/>
+        <div class="contenthover">
+            <h1> asmtel light</h1>
+            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+        </div>
+    </div>
+
+    <div class='content-with-image'>
+        <img src="images/image10.jpg" id="image11"/>
+        <div class="contenthover">
+            <h1> asmtel light</h1>
+            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+        </div>
+    </div>
+
+    <div class='content-with-image'>
+        <img src="images/image10.jpg" id="image12"/>
+        <div class="contenthover">
+            <h1> asmtel light</h1>
+            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+        </div>
+    </div>
+
+    <div class='content-with-image'>
+        <img src="images/image10.jpg" id="image13"/>
+        <div class="contenthover">
+            <h1> asmtel light</h1>
+            <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+        </div>
+    </div>
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-content-hover/jquery.contenthover.js"></script>
+    <script>
+           $(document).ready(function() {
+                $('#image10').contenthover({
+                    overlay_background: '#000',
+                    overlay_opacity: 0.75
+                });
+
+                $('#image11').contenthover({
+                    overlay_background: '#000',
+                    overlay_opacity: 0.75,
+                    effect: 'slide',
+                    slide_speed: 100
+                });
+
+                $('#image12').contenthover({
+                    overlay_background: '#000',
+                    overlay_opacity: 0.75,
+                    effect: 'slide',
+                    slide_speed: 100,
+                    slide_direction: 'right'
+                });
+
+                $('#image13').contenthover({
+                   hover_class: "grey-tiles",
+                   overlay_opacity: 0.65,
+                });
+           });
+    
+    </script>
+</body>
+</html>

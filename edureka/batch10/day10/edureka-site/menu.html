@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        ul.main-menu, ul.sub-menu{
+            padding: 0px 20px;
+            margin: 0;
+            list-style-type: none;
+            background-color: lightpink;
+        }
+
+        ul.main-menu > li {
+            position: relative;
+            display: inline-block;
+            width: 140px;
+            padding: 10px 0px;
+        }
+        ul.sub-menu {
+            position: absolute;
+            top: 36px;
+            left: 0px;
+            display: none;
+        }
+
+        ul.main-menu > li:hover > ul.sub-menu {
+            display: block;
+            background-color: lightpink;
+        }
+
+        li:hover {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <ul class="main-menu">
+        <li>Electronis
+            <ul class="sub-menu">
+                <li>Phone</li>
+                <li>TV</li>
+                <li>Health</li>
+                <li>Music System</li>
+            </ul>
+        </li>
+        <li>Books</li>
+        <li>clothes</li>
+        <li>Groceries</li>
+
+    </ul>
+    
+</body>
+</html>

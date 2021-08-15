@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tweets-container, #tweets-hashtags{
+            width:33%;
+            margin: 0 auto;
+            height: 500px;
+            overflow: auto;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1> Twitter Widget</h1>
+    <div id="tweets-container">
+        <a class="twitter-timeline" href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div id="tweets-hashtags">
+        <a class="twitter-timeline" href="https://twitter.com/TwitterDev/lists/national-parks?ref_src=twsrc%5Etfw">A Twitter List by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</body>
+</html>

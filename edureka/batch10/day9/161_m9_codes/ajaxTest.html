@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function loadData()
+{
+  var xmlhttp;    
+  if (window.XMLHttpRequest)
+  { // For new browsers e.g. IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  }
+ else
+  {// For older browsers e.g. IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+    
+   xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("output").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","sample.txt",true);
+xmlhttp.send();   
+}
+</script>
+</head>
+<body>
+
+<div id="output">AJAX response will be shown here</div><br/>
+<button type="button" onclick="loadData()">Click to make an AJAX call</button>
+
+</body>
+</html>

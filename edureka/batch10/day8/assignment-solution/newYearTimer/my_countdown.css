@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:300,700);
+body { margin: 0; padding: 0;background-image: url("background.jpg") }
+#showcase{
+   font-size:16px;   
+   font-family:'Teko', sans-serif;  
+   width:500px;   
+   margin:100px auto;   
+   border:1px solid rgba(255,255,255,.2);  
+   background:#092f6e;  
+}
+
+#showcase .heading{ 
+  background-color:rgba(0,0,0,.5);  
+  padding:15px 0px 2px 0px;
+  margin:0px 0px 30px 0px;
+}
+
+#showcase h1{
+
+  font-size: 4.2em;
+  color: #ffffff;
+  text-transform:uppercase;
+  font-weight:300;
+  line-height:70px;
+  margin:0px 0px 0px -5px;
+  padding:0;
+  text-align: center;
+}
+
+
+#showcase h2{
+
+  font-size: 1.5em;
+  color:  #6fb5f8;
+  text-transform:uppercase;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0px;
+  padding:  0px;
+  text-align: center;
+  letter-spacing: 5px;
+
+} 
+
+#showcase .my-countdown .countdown-row{
+  display:block;
+  text-align:center;
+  
+}
+
+#showcase .my-countdown .countdown-section{
+  display:inline-block;
+  width:100px;
+}
+
+#showcase .my-countdown .countdown-amount{
+  display:block;
+  color:#ffffff;
+  font-size:5.6em;
+  line-height:55px;
+}
+
+#showcase .my-countdown .countdown-period{
+  display:block;
+  color:#6fb5f8;
+  font-size:1.4em;
+  text-transform: uppercase;
+  letter-spacing:2px;
+}
+
+
+

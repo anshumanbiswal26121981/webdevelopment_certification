@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("#header").click(function(){
+        $("#panel").slideDown("slow");
+    });
+});
+</script>
+ 
+<style> 
+#header {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(79, 121, 216, 0.51);
+    border: solid 1px #c3c3c3;
+}
+#panel {
+    padding: 60px;
+    text-align: center;
+    background-color: rgba(237, 154, 41, 0.51);
+    border: solid 1px #c3c3c3;
+    display: none;
+}
+</style>
+</head>
+<body> 
+<div id="header">Quote of the day !!!</div>
+<div id="panel">Never leave that till tomorrow which you can do today - Benjamin Franklin</div>
+</body>
+</html>

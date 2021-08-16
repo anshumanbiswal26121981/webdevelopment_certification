@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Spinner - Currency</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script> 
+    
+  <script src="globalize.js"></script>   
+  <script src="globalize.culture.en-US.js"></script>
+  <script src="globalize.culture.de-DE.js"></script>
+  <script src="globalize.culture.ar-YE.js"></script>
+ 
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <script>
+  $(function() {
+    $( "#currency" ).change(function() {
+      $( "#spinner" ).spinner( "option", "culture", $( this ).val() );
+    });
+      
+    $( "#spinner" ).spinner({
+      min: 1,     
+      step: 10,   
+      numberFormat: "C"
+    });
+  });
+  </script>
+</head>
+<body>
+<div style="position:absolute;top:20px;left:50px">
+ <p>
+  <label for="currency">Currency to donate</label>
+  <select id="currency" name="currency">
+    <option value="en-US">US $</option>
+    <option value="de-DE">EUR € </option>
+    <option value="ar-YE">Yemen Rial ﷼</option>
+  </select>
+ </p>
+</div>
+    
+<div style="position:absolute;top:20px;left:400px">
+<p>
+  <label for="spinner">Amount to donate:</label>
+  <input id="spinner" name="spinner" value="1">
+</p>
+</div> 
+</body>
+</html>

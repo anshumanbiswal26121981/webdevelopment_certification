@@ -1,0 +1,102 @@
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+<script src="bootstrap/js/jquery-1.11.3.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+    
+    <body background="images/background.jpg"> 
+        
+        <script>
+        function loadData(element){
+         
+          var xmlhttp;
+          if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                  xmlhttp=new XMLHttpRequest();
+           }
+          else
+           {// code for IE6, IE5
+             xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+         
+            xmlhttp.onreadystatechange=function()
+          {
+           if (xmlhttp.readyState==4 && xmlhttp.status==200)
+             {
+             document.getElementById("myModalBody").innerHTML=xmlhttp.responseText;
+            }
+          }
+         
+           switch(element.id){
+          
+             case 'img1':  xmlhttp.open("GET","descriptions/nelson-mandela.html",true); break;
+                 
+             case 'img2' : xmlhttp.open("GET","descriptions/abraham-lincoln.html",true);  break;
+                 
+             case 'img3' : xmlhttp.open("GET","descriptions/gandhi.html",true);   break;
+                  
+             case 'img4':  xmlhttp.open("GET","descriptions/mother-teresa.html",true); break;
+                 
+             case 'img5' : xmlhttp.open("GET","descriptions/muhammad-ali.html",true);  break;
+                 
+             case 'img6' : xmlhttp.open("GET","descriptions/fidel-castro.html",true);   break;
+            }
+            
+            xmlhttp.send();
+         }    
+        </script>
+        <br/><h2 align="center">The Legends</h2><br/><br/>
+    
+    <div class="container">
+       <div class="row">
+         <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img1" onclick="loadData(this)" src="images/Nelson-Mandela-300x200.jpg"/></a> 
+         </div>
+           
+        <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img2" onclick="loadData(this)" src="images/abraham_lincoln.jpg"/></a> 
+         </div>
+           
+        <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img3" onclick="loadData(this)" src="images/GANDI-copia-300x200.jpg"/></a> 
+         </div> 
+      </div><br/><br/><br/><br/>
+         
+      <div class="row">
+         <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img4" onclick="loadData(this)" src="images/Mother-Teresa-300x200.jpg"/></a> 
+         </div>
+           
+        <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img5" onclick="loadData(this)" src="images/Ali-8.jpg"/></a> 
+         </div>
+           
+        <div class="col-md-4">
+         <a data-toggle="modal" href="#myModal"><img id="img6" onclick="loadData(this)" src="images/fidel-castro-wallpaper-300x200.jpg"/>          </a> 
+         </div> 
+       </div> 
+    </div>  
+                
+       <!--  Modal Starts -->       
+       <div class="modal fade" id="myModal" tabinex="-1" role="dialog" aria-hidden="true" >
+           <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header" id="mymodalHeader">
+                     <h2>The Legend</h2>
+                   </div>
+                   
+                   <div class="modal-body" id="myModalBody">
+                    
+                   </div>
+                   
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Got It</button>
+                   </div>
+               </div>           
+           </div>       
+       </div>
+      <!---- Modal Ends   --->
+        
+    </body>
+</html>

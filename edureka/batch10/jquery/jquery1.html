@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="readyDemo" ></div>
+    <a href="yahoo.com" target="_blank">Google Blank</a>
+    <a href="google.com" target="_self">Google Self</a>
+    <h1>Text</h1>
+    <div class="readyDemoClass"></div>
+    <p>List 1:</p>
+    <ul id="item-list">
+        <li id="first-li">
+            <a> Outside</a>
+            <div><a id="inside-a-div">Inside</a></div>
+        </li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <ul id="item-list-new">
+        <li id="first-li-new">
+            coffee
+        </li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    <button>Click Me</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        console.log("before document is ready")
+        $(document).ready(function () {
+            // use this to do activities when page laods
+            console.log("document is ready")
+            //to access through id
+           // $('#readyDemo').text("Webpage is ready")
+            //jquery method chaining
+            $('#readyDemo').text("Webpage is ready").css('color','blue').css('font-weight',700).css('color','red').fadeOut(1000).fadeIn(1000)
+           // how to access class 
+            $('.readyDemoClass').text("Webpage is ready using readyDemoClass").css('color','blue').css('font-weight',700).css('color','red').fadeOut(1000).fadeIn(1000)
+            // you can use it on the elemnt itself
+            $('h1').text("changed the text")
+            // hoew to select the attribute
+            $("a[target='_self']").css('color','green');
+           // $("a[href='yahoo.com']").text('Yahoo')
+            // select children element 
+            $('#item-list > li').css('color','red')
+            // on;ly select the first child element
+            $('#item-list-new > li:first').css('color','red')
+
+             // on;ly select the last child element
+             $('#item-list-new > li:last').css('color','blue')
+             // set the text to yahoo which is not google.com
+             $("a:not([href='google.com'])").text('Yahoo')
+
+            
+        });
+
+        $("button").click(function(){
+            $("#item-list").find("a").css('color','red');
+        })
+    </script>
+
+</body>
+</html>

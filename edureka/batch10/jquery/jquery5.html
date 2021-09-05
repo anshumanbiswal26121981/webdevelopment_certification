@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .golden-link{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <a target="_blank" class="color-box after" href="https://www.google.com" id="master"> Google</a>
+
+    <a target="_self" href="https://www.yahoo.com"> Yahoo</a>
+    
+    <button id="linkFix">
+        Fix my links
+    </button>
+
+    <button id="clonelink">
+        Clone my links
+    </button>
+
+    <div id="clones">
+
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+          $(document).ready(function () {
+            //   $('#linkFix').click(function() {
+            //     var targetValue = $('a').attr('target');
+            //       if (targetValue == '_self') {
+            //         $('a').attr('target','_blank');
+            //       } else {
+            //         console.log($('a').attr('target'));
+            //       }
+                   
+            //   });
+
+            // $('#linkFix').click(function() {
+            //    // to remove an attribute
+            //    $('a').removeAttr('href');
+            //  });
+
+            // remove class
+            // $('#linkFix').click(function() {
+            //     if ($('a').hasClass('after') ==  true) {
+               
+            //         $('.after').removeClass('after').addClass('golden-link');
+            //     }
+            // });
+
+            //tpoggle class
+            // $('#linkFix').click(function() {
+            //     $('a').toggleClass('after').toggleClass('golden-link').toggleClass('color-box')
+            // });
+
+            //clone
+            $('#clonelink').click(function() {
+                 $('#master').clone(true).insertAfter('#clones');
+             });
+        });
+    </script>
+</body>
+</html>

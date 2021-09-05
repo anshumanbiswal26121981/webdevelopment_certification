@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .selected {
+            text-decoration: underline;
+        }
+
+        .middle {
+            color: lightblue;
+        }
+
+        .golden-link {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="google.com">Google</a>
+        </li>
+        <li class="middle">
+            <a href="yahoo.com">Yahoo</a>
+        </li>
+        <li class="middle">
+            <a href="alibaba.com">Alibaba</a>
+        </li>
+        <li>
+            <a target="_self" href="amazon.com">Amazon</a>
+        </li>
+    </ul>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        // toggle the first match using eq(0). eq takes 1 element
+        //$('li').eq(0).toggleClass('golden-link');
+
+        // toggle all the elements say for class = middle. Filter gives all the elements with matching criteria
+        $('li').filter('.middle').toggleClass('golden-link');
+    </script>
+</body>
+</html>

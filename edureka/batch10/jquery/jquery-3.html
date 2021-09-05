@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p id="question">What is the capital of India?</p>
+        <input type="text" id="answer-box"/>
+        <p id="result"></p>
+        <p id="answer"></p>
+        <button>Submit</button>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function() {
+                var answer = $('#answer-box').val();
+                if (answer == 'Delhi') {
+                    $('#result').text('Your answer is correct');
+                } else {
+                    $('#result').html('<span style="color:red"> Your answer is incorrect </span>');
+                    $('#answer').text('Correct answer is Delhi');
+                }
+
+            });
+
+        });
+
+        $('.after').click(function() {
+
+        });
+    </script>
+</body>
+</html>

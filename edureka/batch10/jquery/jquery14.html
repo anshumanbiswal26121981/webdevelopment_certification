@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p style="border: 1px solid black; padding: 20px" id="bind-example"></p>
+    </div>
+    <div id="colorbox" style="width:300px; height:300px; background-color: red; border:1px solid rebeccapurple;">
+        <span style="color:white;font-size:16px" id="message">
+        </span>
+    </div>
+
+    <div id="eventcolorbox" style="width:300px; height:300px; background-color: green; border:1px solid rebeccapurple;">
+        <span style="color:black;font-size:16px" id="message">
+        </span>
+    </div>
+
+    <div id="customeventbox" style="width:300px; height:300px; background-color: blue; border:1px solid rebeccapurple;">
+        <span style="color:black;font-size:16px" id="message">
+            custom event box
+        </span>
+    </div>
+
+    <a href="http://www.google.com" id="google"> Google</a>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+          $(document).ready(function () {
+
+          });
+
+          $("#bind-example").bind("mouseenter", function() {
+              console.log("Mouse enter Worked !")
+          });
+
+          $("#bind-example").bind("mouseleave", function() {
+              console.log("Mouse leave Worked !")
+              $(this).unbind('mouseenter');
+          });
+
+          $('#colorbox').on({
+              mouseenter: function() {
+                  $('#message').text('You have entered the box');
+              },
+              mouseleave: function() {
+                $('#message').text('You have left the box');
+              },
+              click: function() {
+                $('#message').text('You clicked the box');
+              }
+          });
+
+          $('#eventcolorbox').on('click', function(event){
+                console.log('event.type:' + event.type); // the event type click
+                console.log('event.which:'+event.which); // the button or key that was pressed
+                console.log('event.target:'+event.target);// the originating element
+                console.log('event.pageX:'+event.pageX); //the document mouse x cordinate
+                console.log('event.pageY:'+event.pageY);//the document mouse y cordinate
+          });
+
+          $('#google').on('click', function(event) {
+            event.preventDefault();
+            console.log('google hyperlink prevent default:'+ this);
+          });
+
+          $('#customeventbox').on('customEvent', function(event){
+             console.log('custom event attached')
+          });
+          $('#customeventbox').trigger('customEvent');
+    </script>
+</body>
+</html>

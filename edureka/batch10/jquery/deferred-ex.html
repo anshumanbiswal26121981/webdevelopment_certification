@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userDetails;
+
+        //pseudo code for deferred object whatit does
+        // function ajax(options) {
+        //     var request = $.Deferred();
+        //     request.resolve(options.success);
+        //     request.reject(options.error);
+        // }
+
+        $("button").click(function() {
+           var get =   $.ajax({
+            url:'https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',
+            type: 'GET',
+            dataType: 'json',
+            timeout:2500,
+            success: function(result) {
+                userDetails = result;
+                console.log('completed with success and data ', result);
+                
+            },
+            error: function (result) {
+                console.log("completed with error");
+            },
+            complete: function() {
+                console.log('Complete')
+            }
+        });
+        
+        get.done(function(){
+            console.log('inside done'+ userDetails);
+        });
+        get.fail(function(){
+            console.log('inside fail');
+        });
+        get.always(function(){
+            console.log('inside always');
+        })
+
+        // $.get('https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',{},
+        // function(response) {
+        //     console.log('request completed');
+        // }, 'json');
+
+        // $.getJSON('https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',{},
+        // function() {
+        //     console.log('request completed');
+        // });
+
+        $('.container').load('test.html')
+
+        //caching
+        var promise = $.post('/songs',{'id':1}).promise();
+        promise.done(callback);
+        //caching using promise
+        var cache={};
+        function loadSong(id,callback){
+            if(!cache[id]){
+                cache[id]= $.post('/songs',{'id':1}).promise();
+            }
+            cache[id].done(callback);
+        }
+
+        //deferred caching: suppose we want to load several ajax requests at once, and we have to wait to get all ajax
+        //calls response before loading data, with regular callbacks this is hell.So deferred.when can be used
+        $.deferred.when( $.post('/songs',{id:1}), 
+                         $.post('/songs',{id:2}), 
+                         $.post('/songs',{id:3}).then(drawToDOM));
+
+        function drawToDOM(song1, song2, song3) {
+
+        }
+    });
+    </script>
+</body>
+</html>

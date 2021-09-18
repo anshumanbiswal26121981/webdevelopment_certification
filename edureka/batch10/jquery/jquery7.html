@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href='#'>Link 1</a></li>
+        <li><a href='#'>Link 2</a></li>
+        <li><a href='#'>Link 3</a></li>
+    </ul>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        var num =[1,2,3,4,5,6];
+        $.each(num, function(index, value){
+            console.log(index, value);
+        });
+
+        $("li").each(function(index, elem){
+            console.log($(this).text());
+        });
+    </script>
+</body>
+</html>

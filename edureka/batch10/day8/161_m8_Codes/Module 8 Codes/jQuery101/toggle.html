@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#switch").click(function(){
+        $("#logo").toggle();
+    });
+});
+</script>
+</head>
+<body>
+
+<h1 align="center">Click toggle button to show and hide the image</p>
+<button id="switch">Toggle</button>
+<div>
+<img id="logo" height="400" width="500" src="google-new-logo.jpg"/>
+</div>    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .selected {
+            text-decoration: underline;
+        }
+
+        #explanation {
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .color-box {
+            width: 250px;
+            height: 250px;
+            margin: 2px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .after {
+            background-color: red;
+        }
+
+        .before {
+            background-color: blue;
+        }
+
+        .append {
+            background-color: green;
+        }
+
+        .prepend {
+            background-color: cyan;
+        }
+
+        .attached {
+            background-color: gold;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-box after">
+            After
+        </div>
+        <div class="color-box before">
+            Before
+        </div>
+        <div class="color-box append">
+            Append
+        </div>
+        <div class="color-box prepend">
+            Prepend
+        </div>
+        <br/><br/>
+        <button id="showBoxes">Show boxes</button>
+        <button id="hideBoxes">Hide boxes</button>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+          $(document).ready(function () {
+
+            $('#hideBoxes').click(function(){
+                $('.color-box').hide(1300);
+            });
+
+           $('#showBoxes').click(function(){
+            $('.color-box').show(1300);
+           });
+          });
+    </script>
+
+</body>
+</html>

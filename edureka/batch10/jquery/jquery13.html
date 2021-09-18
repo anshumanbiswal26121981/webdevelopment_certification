@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .selected {
+            text-decoration: underline;
+        }
+
+        #explanation {
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .color-box {
+            width: 250px;
+            height: 250px;
+            margin: 2px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .after {
+            background-color: red;
+        }
+
+        .before {
+            background-color: blue;
+        }
+
+        .append {
+            background-color: green;
+        }
+
+        .prepend {
+            background-color: cyan;
+        }
+
+        .attached {
+            background-color: gold;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-box after">
+            After
+        </div>
+        <div class="color-box before">
+            Before
+        </div>
+        <div class="color-box append">
+            Append
+        </div>
+        <div class="color-box prepend">
+            Prepend
+        </div>
+        <br/><br/>
+        <button id="fadeIn">FadeIn boxes</button>
+        <button id="fadeOut">FadeOut boxes</button>
+
+        <button id="slideUp">Slideup boxes</button>
+        <button id="slideDown">Slidedown boxes</button>
+        <button id="animate">Animate</button>
+    </div>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+          $(document).ready(function () {
+
+            // $('#fadeIn').click(function(){
+            //     $('.color-box').fadeIn(1300);
+            // });
+          
+            // $('#fadeOut').click(function(){
+            //     $('.color-box').fadeTo(1300,0.5);
+            // });
+
+            $('#slideUp').click(function(){
+                $('.color-box').slideUp(1300);
+            });
+          
+            $('#slideDown').click(function(){
+                $('.color-box').slideDown(1300);
+            });
+
+            $('#animate').click(function(){
+                $('.color-box').animate({'width': '300px', 'margin-top': '40px','opacity':'0.8','display':'inline'},2000);
+          });
+        });
+    </script>
+
+</body>
+</html>

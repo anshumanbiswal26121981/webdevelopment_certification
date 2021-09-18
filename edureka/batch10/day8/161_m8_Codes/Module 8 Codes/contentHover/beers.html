@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link  type="text/css" rel="stylesheet"  href="css/bootstrap.css" />    
+     <link  type="text/css" rel="stylesheet"  href="css/style.css" />      
+     <script src="js/jquery-1.11.3.js"></script>
+     <script src="js/bootstrap.js"></script>  
+     <script src="js/jquery.contenthover.js"></script> 
+    
+<style>
+body {
+     margin: 0;
+     background: url('images/grey_wash_wall.png');
+}
+    
+.mybackground { background:url(transparent_bg.png); }    
+</style>
+    
+<script type="text/javascript">
+        $('document').ready(function(){
+
+         $('#id1').contenthover({
+            overlay_background:'#000',
+            overlay_opacity:0.8
+         });
+            
+        $('#id2').contenthover({
+        effect:'slide',
+        slide_speed:300,
+        overlay_background:'#000',
+        overlay_opacity:0.8
+         }); 
+            
+       $('#id3').contenthover({
+       overlay_background:'#000',
+       overlay_opacity:0.8,
+       effect:'slide',
+       slide_speed:500,
+       slide_direction:'left'   
+       });
+            
+       $('#id4').contenthover({
+       overlay_background:'#000',
+       overlay_opacity:0.8,
+       effect:'slide',
+       slide_speed:500,
+       slide_direction:'right'   
+       });
+    
+       $('#id5').contenthover({
+       overlay_background:'#000',
+       overlay_opacity:0.8,
+       effect:'slide',
+       slide_speed:500,
+       slide_direction:'top'   
+       });
+
+       $('#id6').contenthover({
+       hover_class:'mybackground'
+       });
+
+       });
+</script>
+    
+</head>
+
+
+<body >
+    <br/><br/>
+   
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+           <img id="id1"  class="img-thumbnail" src="images/Anheuser-Busch.jpeg"/>
+           <div class="contenthover">
+            <h3>Anheuser-Busch</h3>
+            <p>Anheuser-Busch from Saint Louis, Missouri is known for its refreshing alcohol</p>            
+           </div>
+       </div>
+          
+       <div class="col-sm-offset-1 col-md-3">
+           <img id="id2"  class="img-thumbnail" src="images/beer-heineken-can-300x300.jpg"/>
+           <div class="contenthover">
+             <h3>Heineken</h3>
+             <p>Dutch brand Heineken is a pale lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken                      International </p>            
+           </div>
+       </div>
+          
+       <div class="col-sm-offset-1 col-md-3">
+           <img id="id3"  class="img-thumbnail" src="images/root-beer-300x300.jpg"/>
+           <div class="contenthover">
+            <h3>Chicken Cock</h3>
+            <p>Chicken cock is famous american whiskey with 43% of alcohol</p>            
+           </div>
+       </div>
+          
+    </div>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row">
+           <div class="col-md-3">
+           <img id="id4"  class="img-thumbnail" src="images/Free-Grolsch-Beer-300x300.png"/>
+           <div class="contenthover">
+            <h3>Grolsch Beer</h3>
+            <p>Grolsch Brewery, known simply as Grolsch, is a Dutch brewery founded in 1615 by Willem Neerfeldt in Groenlo</p>            
+           </div>
+          </div>
+          
+          <div class="col-sm-offset-1 col-md-3">
+           <img id="id5"  class="img-thumbnail" src="images/e4f2b7e77a8171a79c93008c8beed23b.jpg"/>
+           <div class="contenthover">
+            <h3>Meantime</h3>
+            <p>Meantime Brewing Company is a brewery based in Greenwich, London, England. </p>            
+           </div>
+          </div>
+          
+          <div class="col-sm-offset-1 col-md-3">
+            <img id="id6"   class="img-thumbnail" src="images/AW-Root-Beer-300x300.jpg"/>
+            <div class="contenthover">
+            <h3>A & W</h3>
+            <p>A&W Root Beer is a root beer brand primarily available in the United States and Canada, started in 1919 by Roy W. Allen.               </p>            
+            </div>
+          </div> 
+
+    </div>
+    </div>
+    
+</body>
+</html>
+

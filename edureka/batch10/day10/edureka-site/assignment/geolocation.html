@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         #map-container {
+                height: 400px;
+ 
+            }
+    </style>
+</head>
+<body>
+    <div id="error-msg">
+
+    </div>
+    
+    <div class="container">
+        <h2> We are here</h2>
+        <div id="map-container">
+
+        </div>
+
+    </div>
+
+    <script src="https://maps.google.com/maps/api/js"></script>
+    <script>
+        window.onload = function() {
+            if (window.navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, showError);
+            } else {
+                alert('sorry not able to track your location');
+            }
+           
+            function success(position) {
+                console.log(position);
+                var location = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var map = new google.maps.Map(document.getElementById('map-container'), {
+                    center: location,
+                    zoom: 17
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    "map": map,
+                    title: 'Jagannath Temple Agara, Bangalore'
+                });
+                marker.setMap(map)
+            }
+           
+            function showError(error){
+                var x = document.getElementById('error-msg')
+                switch(error.code){
+                    case error.PERMISSION_DENIED:
+                        x.innerHtml = "User denies the request for geolocation."
+                        break;
+
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHtml = "Location information is unavialable."
+                        break;  
+
+                    case error.TIMEOUT:
+                        x.innerHtml = "The request to get user location timed out."
+                        break;  
+
+                    case error.UNKNOWN_ERROR:
+                        x.innerHtml = "Unknown error ocurred."
+                        break;  
+
+                }
+            }
+        };
+       
+    </script>
+      
+</body>
+</html>

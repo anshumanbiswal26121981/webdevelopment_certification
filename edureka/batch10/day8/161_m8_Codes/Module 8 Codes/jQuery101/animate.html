@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("#sfo").on({
+        
+        mouseover:function(){
+            $(this).animate({
+                'height':500,
+                'width':500
+            },3000);
+            
+        },
+        mouseout:function(){
+             $(this).animate({
+                'height':300,
+                'width':300
+            },3000);
+        }
+       
+    });    
+    
+});
+</script>
+</head>
+<body>
+<img id="sfo" height="300" width="300"  src="sanfrancisco.jpg"/>
+</body>
+</html>

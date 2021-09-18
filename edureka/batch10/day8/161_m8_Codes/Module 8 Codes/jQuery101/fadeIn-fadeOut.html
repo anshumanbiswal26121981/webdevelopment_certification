@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#fadeOut").click(function(){
+        $("#logo").fadeOut(3000);
+    });
+    $("#fadeIn").click(function(){
+        $("#logo").fadeIn(3000);
+    });
+});
+</script>
+</head>
+<body>
+
+<h1 align="center">Click FadeOut and FadeIn button to fadeOut and fadeIn the image</p>
+<button id="fadeOut">FadeOut</button>
+<button id="fadeIn">FadeIn</button>
+<div>
+<img id="logo" height="400" width="500" src="google-new-logo.jpg"/>
+</div>    
+</body>
+</html>
+

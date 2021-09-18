@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="readyDemo" ></div>
+    <a href="yahoo.com" target="_blank">Google Blank</a>
+    <a href="google.com" target="_self">Google Self</a>
+    <h1>Text</h1>
+    <div class="readyDemoClass"></div>
+    <p>List 1:</p> -->
+    <ul id="item-list">
+        <li id="first-li">
+            Coffee
+            <a href="google.com"> Google.com</a>
+            <div><a href="yahoo.com" id="inside-a-div">Yahoo.cpm</a></div>
+        </li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+
+    <!-- <ul id="item-list-new">
+        <li id="first-li-new">
+            coffee
+        </li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul> -->
+    <button>Click Me</button>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        console.log("before document is ready")
+    
+       
+        $("button").click(function(){
+             //find anchor tag
+           // $("#item-list").find("a").css('color','red');
+
+              //children example
+             //$("#first-li").find("a").css('color','red');
+           // $("#first-li").children("a").css('color','red');
+
+            //closest
+            //$("#inside-a-div").closest("li").css('color','red');
+
+            //parent
+           // $("#inside-a-div").parent().css('border','1px solid black');
+
+           //next
+           //$("#first-li").next().css('border','1px solid blue')
+
+           //prev
+           //$("#item-list li:last").prev().css('border','1px solid green')
+
+           //siblings
+          // $("#item-list li:first").siblings().css('border','1px solid black')
+
+          //first
+          //$("li").first().css('border','1px solid black')
+
+          //last
+          $("li").last().css('border','1px solid black')
+
+        })
+
+      
+
+    </script>
+
+</body>
+</html>

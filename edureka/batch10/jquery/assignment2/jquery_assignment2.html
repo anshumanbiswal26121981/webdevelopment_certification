@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample form styled using jQuery</title>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" >
+
+
+    <style type="text/css">
+        .focus {
+        border: 2px solid red;
+        background-color: #9b9b98c5;
+        }
+
+        .panel-box {
+            width: 250px;
+            height: 250px;
+            margin: 2px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .panel {
+            background-color: red;
+        }
+        </style>
+</head>
+<body>
+    <form>
+        <label id="fname" for="fname">First name:</label><br>
+        <input type="text" id="fnametextbox" name="fname"><br>
+        <label id="lname" for="lname">Last name:</label><br>
+        <input type="text" id="lnametextbox" name="lname">
+        <input type="submit" value="Reset" id="resetBtn" class="btn btn-default" title="Reset all text entered"/>
+        <input type="submit" value="Sign up" id="signupBtn" class="btn btn-primary" title="Check all fields before Signup"/>
+
+    </form>
+    <br>
+    <br>
+    <div class="container">
+        <div class="panel-box panel">
+            
+        </div>
+    </div>
+    <button id='toggle-sliding'>Toggle Sliding</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+         $(document).ready(function () {
+            $("#lname").remove();
+            $('input').filter('#lnametextbox').remove();
+            $('#fnametextbox').after('<br><label id="email" for="email">Email:</label><br>')
+            $('#email').after('<br><input type="text" id="emailtext" name="email"><br>');
+            $('#emailtext').after('<br><label id="address" for="address">Address:</label><br>')
+            $('#address').after('<br><input type="text" id="addresstext" name="address"><br>');
+            $('#addresstext').after('<br><label id="dob" for="dob">Date of Birth:</label><br>')
+            $('#dob').after('<br><input type="text" id="dobtext" name="dob"><br>');
+            $("#dobtext").attr("type", "date");
+            $("#emailtext").attr("type", "email");
+            $('#toggle-sliding').click(function(){
+                $('.panel-box').slideToggle('slow');
+            });
+
+          
+         });
+    </script>
+    <script src="jquery-ui/jquery-ui.js">
+      $('#resetBtn').tooltip();
+
+        $('#signupBtn').tooltip();  
+    </script>
+</body>
+</html>

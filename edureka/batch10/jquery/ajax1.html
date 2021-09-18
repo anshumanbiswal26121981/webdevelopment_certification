@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"></div>
+    <button>Click Me</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $("button").click(function() {
+             // $.ajax({
+        //     url:'https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',
+        //     type: 'GET',
+        //     dataType: 'json',
+        //     timeout:2500,
+        //     success: function(result) {
+        //         console.log('completed with success and data ', result);
+                
+        //     },
+        //     error: function (result) {
+        //         console.log("completed with error");
+        //     },
+        //     complete: function() {
+        //         console.log('Complete')
+        //     }
+        // });
+
+        // $.get('https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',{},
+        // function(response) {
+        //     console.log('request completed');
+        // }, 'json');
+
+        // $.getJSON('https://api.jsonbin.io/b/613b8e394a82881d6c4c92c5',{},
+        // function() {
+        //     console.log('request completed');
+        // });
+
+        $('.container').load('test.html')
+    });
+       
+    </script>
+
+</body>
+</html>

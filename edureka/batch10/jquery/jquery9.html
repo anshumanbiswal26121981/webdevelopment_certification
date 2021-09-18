@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .selected {
+            text-decoration: underline;
+        }
+
+        .middle {
+            color: lightblue;
+        }
+
+        .golden-link {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="google.com">Google</a>
+        </li>
+        <li class="middle">
+            <a href="yahoo.com">Yahoo</a>
+        </li>
+        <li>
+            <ul>
+                <li>Amazon.com</li>
+                <li>Amazon.fr</li>
+                <li>Amazon.in</li>
+                <li>Amazon.us</li>
+            </ul>>
+        </li>
+    </ul>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+    
+        //$('li').has('ul').css('background-color','lightgray')
+
+        //to consider everything which is not in middle
+        $('li').not('.middle').css('background-color','lightgray')
+
+    </script>
+</body>
+</html>

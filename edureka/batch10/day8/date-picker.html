@@ -7,6 +7,32 @@
     <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
 
+    <style>
+            .message {
+                padding: 10px 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 4px;
+                margin: 10px 0;
+            }
+
+            .message-success {
+                border-color: green;
+                background-color: lightgreen;
+            }
+
+            .message-danger {
+                border-color: crimson;
+                background-color: lightpink;
+            }
+            .holiday > span {
+                background-color: lightpink !important;
+                background-image: none !important;
+            }
+
+    </style>
+
+
 </head>
 <body>
     
@@ -17,7 +43,24 @@
     <script>
       
        $(document).ready(function() {
+        var newYear018 = new Date();
+        newYear018.setFullYear(2022);
+        newYear018.setMonth(0);
+        newYear018.setDate(1);
+        var myHolidays  = [newYear018];
+            
 
+        function isHoliday(t) {
+            return myHolidays.some(function(date) {
+                console.log(date, t);
+                var retVal = (date.getDate === t.getDate() && date.getMonth() === t.getMonth() && 
+                date.getFullYear()  === t.getFullYear());
+                console.log(retVal);
+                return retVal;
+            });
+        }
+
+        console.log('newYear018 is '+newYear018);
         function isInvalid() {
             return true;
         }
@@ -37,19 +80,21 @@
                 // maxDate: 180
 
                   /* or */
-                  minDate: '21/04/08',
+                 minDate: '17-08-21', //yy-mm-dd
                  maxDate: 180,
                  changeMonth: true,
                  changeYear:true,
                  dateFormat: 'D, dd-M-yy',
-                 onSelect: function(selectedDate, obj){
-                     console.log('date selected', selectedDate);
-                     if (isInvalid(selectedDate)) {
-                         setTimeout(function() {
-                            $('#start-date').val('');
-                         }, 0)
-                         
+                 beforeShowDay: function(t){
+                     var e = t.getDay();
+                     var isToBeEnabled = !isHoliday(t) && (e > 0 && 6 > e);
+                     var className = "";
+                     //console.log('date selected', selectedDate);
+                     if (isHoliday(t)) {
+                         className = 'holiday'; 
                      }
+                     console.log('isHoliday classname is ', className);
+                     return [isToBeEnabled, className];
                  }
 
                });

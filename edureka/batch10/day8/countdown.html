@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="jquery-countdown/css/jquery.countdown.css"> 
+
+    <style>
+        /* You need to inspect and see the el;emsnta id and classname of the third party plygin to customize your own way */
+        #countdown {
+            overflow: hidden;
+        }
+        .countdown-amount {
+         color: red;
+        }
+
+        .countdown-section {
+            font-size: 125%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="countdown"></div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="jquery-countdown/js/jquery.plugin.js"></script> 
+    <script src="jquery-countdown/js/jquery.countdown.js"></script>
+    <script>
+      
+       $(document).ready(function() {
+           var newYesr2018 = new Date();
+           newYesr2018.setFullYear(newYesr2018.getFullYear() + 1);
+           newYesr2018.setDate(1);
+           newYesr2018.setMonth(0);/* months are numbered from 0-11, 0 = january */
+           $('#countdown').countdown({
+                until: newYesr2018
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Document</title>
+</head>
+<body>
+    <div id="quote"></div>
+    
+    <script>
+        
+        function ajax(config) {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('readystatechange', function(){
+                if ((xhr.status >= 200 && xhr.status < 400) && xhr.readyState == 4) {
+                   config.success(xhr.responseText);
+                  
+                } else if (xhr.status >=  400){
+                    config.error();
+                    
+                }
+                console.log('event ocurred');
+            });
+            xhr.open(config.method,config.url, true);// we always give true. True means it makes the message asynchronous
+            xhr.send();
+
+        }
+
+        function success(responseText) {
+            document.getElementById('quote').innerHTML = responseText;
+        }
+
+        function error(){
+            alert('error fetching');
+        }
+      
+        ajax({
+            method: 'GET',
+            url: '/quote.txt',
+            success: success, 
+            error: error});
+    </script>
+</body>
+</html>

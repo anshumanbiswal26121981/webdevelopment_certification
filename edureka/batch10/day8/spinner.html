@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+
+    <style>
+            .message {
+                padding: 10px 20px;
+                border-width: 1px;
+                border-style: solid;
+                border-radius: 4px;
+                margin: 10px 0;
+            }
+
+            .message-success {
+                border-color: green;
+                background-color: lightgreen;
+            }
+
+            .message-danger {
+                border-color: crimson;
+                background-color: lightpink;
+            }
+            .holiday > span {
+                background-color: lightpink !important;
+                background-image: none !important;
+            }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <input type="text" id="quantity"/>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui/jquery-ui.min.js"></script>
+    <script src="jquery-mousewheel/jquery-mousewheel-3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+      
+       $(document).ready(function() {
+        var newYear018 = new Date();
+            $('#quantity').spinner({
+                min: 1,
+                max :100,
+                step: 2
+                
+            });
+
+            $('#quantity').on('keydown', function($event){
+                $event.preventDefault();// preventdefault 
+            })
+        });
+    </script>
+</body>
+</html>

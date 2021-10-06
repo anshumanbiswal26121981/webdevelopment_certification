@@ -1,0 +1,38 @@
+<h2 style="color:blue">Attribute Directives </h2>
+
+<h3>ngClass/ngStyle</h3>
+<div [ngClass]="{border: true,background:false}"></div><br/>
+<div [class.background]="true"></div><br/>
+<div [ngStyle]="{'background-color':'red'}"></div>
+
+<hr/>
+<h2 style="color:blue">Strcutural Directives </h2>
+<h2>*ngIf</h2>
+<div *ngIf="switch">Conditional Text</div>
+<button (click)="onSwitch()">Switch</button>
+
+<hr/>
+<h2 style="color:blue">Structural Directives </h2>
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let temp of items">{{temp}}</li>
+</ul>
+
+
+<hr/>
+<h2 style="color:blue">Structural Directives </h2>
+<h2>*ngSwitch</h2>
+<div [ngSwitch]="course">
+   <p *ngSwitchCase="'aws'">AWS</p>
+   <p *ngSwitchCase="'azure'">Azure</p>
+   <p *ngSwitchDefault>GCP</p>
+</div>
+
+<hr/>
+<h2 style="color:blue">Custom Attribute Directives </h2>
+<div highlight [highlightColor]="'red'" [defaultColor]="'yellow'"> Some Text </div>
+<h1 highlight [highlightColor]="'blue'" [defaultColor]="'cyan'"> Added Text </h1>
+
+
+<hr/>
+<fa-pipescomp></fa-pipescomp>

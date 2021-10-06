@@ -1,0 +1,9 @@
+<form #f="ngForm">
+    
+        <input type="text" name="password" ngModel> &nbsp;&nbsp;
+        <input type="text" name="pconfirm" ngModel>
+   
+</form>
+<br/>
+<pre> Password: {{ f.value.password}}</pre><br/>
+<pre> Password Confirmation: {{ f.value.pconfirm}}</pre>

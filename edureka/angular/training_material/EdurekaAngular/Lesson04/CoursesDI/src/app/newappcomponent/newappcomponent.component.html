@@ -1,0 +1,15 @@
+<h2>New App Component</h2>
+<table border="2">
+    <thead>
+        <tr *ngIf="course.length>0">
+            <th>name</th>
+            
+        </tr>
+    <tbody>
+        <tr *ngFor="let temp of course">
+            <td *ngIf="temp.price<20000">{{temp.name}}</td>
+        </tr>
+    </tbody>
+</table>
+
+

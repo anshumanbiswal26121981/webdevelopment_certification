@@ -1,0 +1,22 @@
+  [
+        {
+          "name":"AWS Architect",
+          "category":"Cloud Computing",
+          "price":"21000"
+        },
+        {
+          "name":"Angular Certification Training",
+          "category":"Front End Development",
+          "price":"19000"
+        },
+        {
+          "name":"React Certification Training",
+          "category":"RPA",
+          "price":"20000"
+        },
+          {
+          "name":"Big Data Hadoop",
+          "category":"Anaytics",
+          "price":"10000"
+        }
+      ]

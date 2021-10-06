@@ -1,0 +1,18 @@
+<form [formGroup]="myFormModel"
+      (ngSubmit)="onSubmit()">
+    <div>Username:
+          <input type="text"   formControlName="username">
+    </div>     
+    <div>ssn:
+        <input type="text"  formControlName="ssn">
+    </div>    
+   
+        <div>Password:
+            <input type="password"  formControlName="password">
+        </div>    
+        <div>Confirm Password:
+                <input type="password"  formControlName="pconfirm">
+        </div>   
+  
+    <button type="submit">Submit</button>
+</form>

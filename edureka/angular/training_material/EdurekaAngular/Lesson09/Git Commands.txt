@@ -1,0 +1,38 @@
+git init
+(initializes git)
+
+
+git config --local user.name "Sample"
+git config --local user.email "sample@abc.com"
+(add permission to your file locally as per your git credentials)
+
+
+git remote add origin https://github.com/<user_name>/<repo_name>.git
+(to add ref to temote repositoy into the local repository)
+
+
+git add   .   [SPACE DOT MANDATORY]
+(add files to your repository)
+
+git ls-files
+(To view files in local repository)
+
+git commit --allow-empty -m "Initialization"
+(commit files to local repository)
+
+
+git push origin master
+(push local to web remote repository)
+
+
+git rm -r <folder-name> or <file-name>
+(delete files/folders from local repository)
+
+git commit -m  "Deleted"
+(To commit delete to local repository)
+
+git push origin master
+(to sync folder deletion with remote repository)
+
+
+

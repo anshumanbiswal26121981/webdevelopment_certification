@@ -1,0 +1,17 @@
+<h2>DataBinding</h2>
+<h3 style="color:blue">String Interpolation</h3>
+<p> {{ stringInterpolation  }} ||   {{numberInterpolation}} </p>
+
+<hr/>
+<h3 style="color:blue">Property Binding</h3>
+<input type="text" value="{{numberInterpolation}}"/>
+<fa-property-binding [result]="500"></fa-property-binding>
+
+<hr/>
+<h3 style="color:blue"> Event Binding  </h3>
+<fa-event-binding (clickable)="onMyClick($event)"></fa-event-binding>
+
+<hr/>
+<h3 style="color:blue">Two Way Databinding  </h3>
+<fa-two-way-binding></fa-two-way-binding>
+

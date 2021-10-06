@@ -1,0 +1,24 @@
+<h2>App Component</h2>
+<table border="2">
+    <thead>
+        <tr *ngIf="course.length>0">
+            <th>name</th>
+            <th>category</th>
+            <th>price</th>
+        </tr>
+    <tbody>
+        <tr *ngFor="let temp of course">
+            <td>{{temp.name}}</td>
+            <td>{{temp.category}}</td>
+            <td>{{temp.price}}</td>
+
+        </tr>
+    </tbody>
+</table>
+<br/>
+<app-newappcomponent></app-newappcomponent>
+<app-reactivejs></app-reactivejs>
+
+<hr/>
+<h1>Data via HttpClient</h1>
+<app-newcomponent2></app-newcomponent2>

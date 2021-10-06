@@ -1,0 +1,15 @@
+<form [formGroup]="myFormModel">
+    <div>Product Id:
+        <input type="text" formControlName="id">
+    </div>
+    <div>Description:
+            <input type="text" formControlName="description">
+    </div>
+    <div>Seller:
+            <input type="text" formControlName="seller">
+    </div>
+</form>
+
+<button (click)="updateEntireForm()">Populate</button>
+<button (click)="updatePartOfTheForm()">Update Description</button>
+<button (click)="myFormModel.reset()">Reset</button>

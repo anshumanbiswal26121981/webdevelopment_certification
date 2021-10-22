@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        My first h1 tag
+    </h1>
+
+    <h1>
+        My second h1 tag
+    </h1>
+
+    <h1>
+        My third h1 tag
+    </h1>
+
+    <button> Click me to set style</button>
+
+    <button class="animate"> Click me to animate</button>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $.fn.headerOneStyle = function() {
+            this.css('font-size', '100px');
+            // to chain functions then retrun this.
+            return this;
+        };
+
+        //immidiately invoked function expression. the fucntion that you want to execute only once and never again
+        // why once? like setting of the plugin and you dont want another function to have the same name. And another place
+        // where it is used is $ sign is very popular among js library, so you need to ensure that $ is not used for jQuery
+        // this is also called anonymous function
+        (function ($){
+            $.fn.headerOneStyle = function(option, callback) {
+            this.animate({
+                opacity: option.opacity
+            }, 1500)
+            this.css('font-size', option.fontSize);
+            console.log(callback);
+
+            var data = 123;
+            callback(data);
+            // to chain functions then retrun this.
+            return this;
+        };
+        })(jQuery);// here yo call the function passing the jQuery. So here it is jQuery $
+
+        //for each
+        // (function ($){
+        //     $.fn.headerOneStyle = function() {
+            
+        //         return this.each(function() {
+                    
+        //             $("h1").css('font-size', '100px');
+        //         });
+        // };
+        // })(jQuery);
+
+        $('button').on('click', function(){
+            $("h1").headerOneStyle({
+                'fontSize': '100px'
+            }, function(data) {
+                console.log('Call back code executed from inside one style anbd data is ' + data);
+            }).animate({
+                'font-size': '25px'
+            },3500)
+        });
+
+        $("#animate").on('click', function(){
+            $("h1").headerOneStyle({
+                fontSize: '100px',
+                opacity: 0.2
+            }). headerOneStyle ({
+                fontSize: '50px',
+                opacity: 0.5
+            })
+        });
+      
+    </script>
+</body>
+</html>

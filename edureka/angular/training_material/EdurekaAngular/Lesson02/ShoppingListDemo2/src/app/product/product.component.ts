@@ -6,9 +6,9 @@ import {Product} from './product';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
- products: Product[];//array
+ products: Product[]=[];//array to store entire list of products
  selectedProduct:Product;
- productList: Product[]=[];
+ productList: Product[]=[]; // array to store shopping cart items
  errorItem: boolean = false;
 
   constructor() {   }

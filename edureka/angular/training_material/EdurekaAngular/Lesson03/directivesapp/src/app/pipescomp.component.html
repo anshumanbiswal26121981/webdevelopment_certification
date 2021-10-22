@@ -7,7 +7,7 @@
 <br/>
 <p>In Lowercase :  {{value | lowercase}}        </p>
 <p>In Uppercase :  {{value | uppercase}}        </p>
-<p>In Titlecase :  {{value | titlecase}}        </p> 
+<p>In Titlecase :  {{value | titlecase}}        </p>
 <p><b>Slice Pipe: </b></p>
 <p>Slice Pipe - Eg. 1 :{{value | slice:3}}      </p>
 <p>Slice Pipe - Eg. 2 : {{value | slice:8:14}} </p>
@@ -17,10 +17,10 @@
 <p><b>Currency Pipe: </b></p>
 <p> Original Value : 0.50   Currency:{{0.50 | currency}} </p>
 <p>
-            Original Value : 0.50 
+            Original Value : 0.50
             Currency: {{0.50 | currency}}
             Currency: {{0.50 | currency:'GBP'}}
-            Currency: {{0.50 | currency:'GBP':'code'}} 
+            Currency: {{0.50 | currency:'GBP':'code'}}
 </p>
 <h3>Date Pipe:</h3>
 <p>{{date}}</p>
@@ -43,11 +43,11 @@
     <li *ngFor="let item of servers | custompipe:filteredStatus"
          [ngClass]="{
               'stable':item.status==='stable',
-              'offline':item.status==='offline'   
+              'offline':item.status==='offline'
          }">
-      <span>{{item.status}}  - {{item.name}} - {{item.instanceType | uppercase}} - 
+      <span>{{item.status}}  - {{item.name}} - {{item.instanceType | uppercase}} -
       {{item.started | date}}</span>
-        
+
     </li>
 </ul>
 <style>

@@ -1,0 +1,33 @@
+
+<br>
+<div class="col">
+        
+    <h3>Employees</h3>
+        
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Salary</th>
+              <th>DOB</th>
+              <th>Email</th>
+           
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr appChangeColor *ngFor="let employee of emplist">
+              <td>{{employee.employeeId}} </td>
+              <td> {{employee.firstName}}</td>
+              <td> {{employee.LastName}}</td>
+              <td> {{employee.salary}}</td>
+              <td> {{employee.DOB}} </td>
+              <td> {{employee.email}} </td>
+             
+            </tr>
+
+          </tbody>
+        </table>
+

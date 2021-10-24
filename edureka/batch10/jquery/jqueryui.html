@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <title>Document</title>
+
+    <style>
+        .draggable {
+                background-color: brown;
+                padding: 10px;
+                height: 250px;
+                width: 250px;
+            }
+
+            .droppable {
+                background-color: blue;
+                padding: 10px;
+                height: 500px;
+                width: 500px;
+            }
+
+            .resizable {
+                background-color: green;
+                padding: 10px;
+                height: 500px;
+                width: 500px;
+            }
+
+            #selectable .ui-selecting { background: #FECA40; }
+            #selectable .ui-selected { background: #F39814; color: white; }
+            #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+            #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+
+            #sortable .ui-selecting { background: #FECA40; }
+            #sortable .ui-selected { background: #F39814; color: white; }
+            #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+            #sortable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="date">
+
+    <div id="progressbar"></div>
+    <button>increase by 10</button>
+
+    <div id="draggable" class="draggable"></div>
+
+    <div id="droppable" class="droppable"></div>
+
+    <div id="resizable" class="resizable"></div>
+
+    <ul id = "selectable">
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+    </ul>
+
+
+    <ul id = "sortable">
+        <li>Sortable Item1</li>
+        <li>Sortable Item2</li>
+        <li>Sortable Item3</li>
+        <li>Sortable Item4</li>
+    </ul>
+
+    <div id="accordion">
+        <h3> Firrst Header</h3>
+        <div> First Content Panel</div>
+        <h3> Second Header</h3>
+        <div> Second Content Panel</div>
+        <h3> Third Header</h3>
+        <div> Third Content Panel</div>
+    </div>
+
+    <input id="autocomplete">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script>
+        $('#date').datepicker();
+
+        var progress=0;
+        $('#progressbar').progressbar({
+            value:progress
+        });
+
+        $('button').on('click', function () {
+            progress += 10;
+            $('#progressbar').progressbar({
+                value: progress
+            });
+        });
+
+        $('#draggable').draggable({
+                opacity:0.15
+        });
+
+        $('#droppable').droppable({
+            drop: function() {
+                alert( "Element dropped" );
+            }
+        });
+
+
+        $('#resizable').resizable({
+           animate: false,
+           maxHeight:300,
+           resize: function(event,ui) {
+            console.log(ui.size.height)
+           }
+
+        });
+
+        $('#selectable').selectable();
+
+        $('#sortable').sortable();
+
+        $('#accordion').accordion();
+
+
+        var tags = ["c++","c","Java",".Net","Ruby","Javascript"];
+        $('#autocomplete').autocomplete({
+            source: function(request,response) {
+                var matcher = new RegExp("^"+ $.ui.autocomplete.escapeRegex(request.term),"i");
+                response ($.grep(tags, function(item) {
+                    return matcher.test(item);
+                }) );
+            }
+        });
+    </script>
+</body>
+</html>

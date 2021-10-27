@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+    Username: <input type="text" [(ngModel)]="username" name="username"><br/>
+    Password: <input type="password" name="password"><br/>
+    <my-button *ngIf="flag">Login</my-button>
+
+    <ul *ngFor="let std of students; index as i">
+        <li>{{i+1}} - {{std}}</li>
+    </ul>
+    <button (click) =  "addStudent()">Add</button>
+
